@@ -31,7 +31,11 @@
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="#Sql">Sql</a></li>
-          <li><a href="https://stackshare.io/feed">Stackshare</a></li>
+          <li><a href="#Terminal">Terminal</a></li>
+          <li><a href="#Docker">Docker</a></li>
+          <li><a href="#GIT">Git</a></li>
+          <li><a href="#Mongo">Mongo</a></li>
+       
          
         </ul>
       </li>
@@ -81,7 +85,8 @@
 
 <h1>Code Snippets</h1>
 <ul class="nav nav-tabs mt-3" id="myTabs">
-    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#sqlTab">SQL</a></li>
+    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#VSCode">VSCode</a></li>
+    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#sqlTab">SQL</a></li>
     <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#mongoTab">MongoDB</a></li>
     <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#cSharpTab">C#</a></li>
     <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#dotNetTab">.NET</a></li>
@@ -90,6 +95,42 @@
 
 <!-- Tab Content -->
 <div class="tab-content mt-3">
+    <!-- SQL Tab -->
+    <div class="tab-pane fade show active" id="VSCode">
+        <h3>VSCode</h3>
+        <h4>Shortcuts</h4>
+        <table>
+            <tr>
+                <td>Select Code</td>
+                <td><code><span style="font-weight: bold;">Shift+Ctrl + Left Arrow or Right Arrow</span></code></td>
+            </tr>
+            <tr>
+                <td>Multiple Cursor</td>
+                <td><code><span style="font-weight: bold;">CMD+OPT Up/Dn</span></code></td>
+            </tr>
+            <tr>
+                <td>Select Next</td>
+                <td><code><span style="font-weight: bold;">CMD+D to select CMD+U to unselect</span></code></td>
+            </tr>
+            <tr>
+                <td>Jump Code</td>
+                <td><code><span style="font-weight: bold;">CMD+Arrow to Move Eod or Start Option + Arrow to Jump Words</span></code></td>
+            </tr>
+            <tr>
+                <td>Option + Up/Dn</td>
+                <td><code><span style="font-weight: bold;">Move Line</span></code></td>
+            </tr>
+            <tr>
+                <td>Option+ Shift + Up/Dn</td>
+                <td><code><span style="font-weight: bold;">Copy Line</span></code></td>
+            </tr>
+            <tr>
+                <td>Collapse Code</td>
+                <td><code><span style="font-weight: bold;">CMD+KL</span></code></td>
+            </tr>
+        </table>
+        
+    </div>
     <!-- SQL Tab -->
     <div class="tab-pane fade show active" id="sqlTab">
         <h3>SQL Cheat Codes</h3>
@@ -149,7 +190,106 @@ It is a SQL Server command that forces the recompilation of a stored procedure. 
 
     </p>
 </section>
+<section id="Terminal">
+    <br><br><br>
 
+    <h2>Terminal</h2>
+    <p>
+
+        <h4>Ask MAC to Speak works like example below:</h4>
+        <p>say atul</p>
+        <h4>Find Wifi Password of a connected wifi</h4>
+        
+        <p>security find-generic-password -wa myconnectedwifiname</p>
+        <h4>shows all process</h4>
+        <p>top</p>
+        <h4>Generate Key & IV on Mac Terminal</h4>
+        <p>openssl enc -nosalt -P -aes-128-cbc</p>
+        <h4>Install Brew and enjoy</h4>
+        <p>Brew install cmatrix, e.g. cmatrix</p>
+        <p>brew install asciiquarium, e.g. asciiquarium</p>
+        <p>brew install toilet, e.g. use toilet yourname</p>
+        
+        
+        
+
+    </p>
+</section>
+<section id="Docker">
+    <br><br><br>
+
+    <h2>Docker</h2>
+    <p>
+
+        <span style="font-weight: bold;">Create Image</span><br><code>docker build -t myprocessor </code>
+        <br><br>
+        <span style="font-weight: bold;">Check Image</span><br><code>docker images</code>
+        <br><br>
+        <span style="font-weight: bold;">Create Docker</span><br><code>docker create myprocessor</code>
+        <br><br>
+        <span style="font-weight: bold;">See Docker</span><br><code>docker ps -a</code>
+        <br><br>
+        <span style="font-weight: bold;">Start Docker</span><br><code>docker start/stop &lt;aleas&gt;</code>
+        <br><br>
+        <span style="font-weight: bold;">Attach</span><br><code>docker attach --sig-proxy=false &lt;aleas&gt;</code>
+        <br><br>
+        <span style="font-weight: bold;">Stop</span><br><code>docker stop processordocker</code>
+        <br><br>
+        <span style="font-weight: bold;">Single Run</span><br><code>docker run -it --rm processordocker</code>
+        
+        
+        
+        
+
+    </p>
+</section>
+<section id="GIT">
+    <br><br><br>
+
+    <h2>GIT</h2>
+    <p>
+
+        Add snippets 1by1<br><code><span style="font-weight: bold;">git add -p</span></code>
+        <br><br>
+        Reset last commit when not pushed yet<br><code><span style="font-weight: bold;">git reset --soft HEAD~1</span></code>
+        <br><br>
+        Move back to last branch<br><code><span style="font-weight: bold;">git checkout -</span></code>
+        <br><br>
+        Show changes in single line<br><code><span style="font-weight: bold;">git log —oneline</span></code>
+        <br><br>
+        View git branch history<br><code><span style="font-weight: bold;">git log —oneline —graph</span></code>
+        <br><br>
+        Amend on the Last Commit<br><code><span style="font-weight: bold;">git commit --amend -m "New Message "</span></code>
+        <br><br>
+        Revert the commit<br><code><span style="font-weight: bold;">git revert f229001</span></code>
+        <p> To exit</p>
+        <code>:wq</code>
+        <br>
+        
+        
+        
+        
+        
+
+    </p>
+</section>
+<section id="Mongo">
+    <br><br><br>
+
+    <h2>Mongo</h2>
+    <p>Get Stats for Collection </p>
+    <code>db.getCollectionNames().forEach(function(collection) {
+        var stats = db[collection].stats();
+        print(collection + "," + stats.storageSize+ "," + stats.storageSize/1024/1024/1024 + "," + stats.count);
+    });
+    </code>
+    <p>Get Result as CSV </p>
+    <code>db.getCollection('mycoll').find({"Id" : NumberLong(532231223)})
+        .forEach(function(log) {
+            print(log.CreatedOn+ "," + log.Id);
+        });
+        </code>
+</section>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
