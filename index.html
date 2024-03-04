@@ -7,6 +7,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    code {
+      display: block;
+      white-space: pre-wrap;
+    }
+  </style>
 </head>
 <body style="height:1500px">
 
@@ -96,7 +102,6 @@
 
 <!-- Tab Content -->
 <div class="tab-content mt-3">
-    <!-- SQL Tab -->
     <div class="tab-pane fade show active" id="VSCode">
         <h3>VSCode</h3>
         <h4>Shortcuts</h4>
@@ -178,6 +183,15 @@ EXEC sp_recompile 'YourSproc'
 <br>
 It is a SQL Server command that forces the recompilation of a stored procedure. It discards the existing execution plan and generates a new plan when the procedure is next executed. This can enhance performance by considering the current database state, but should be used sparingly due to potential impact on system performance.
 
+    </p>
+    <h3>View/Update Special Characters</h3>
+    <p>
+    <code>
+        select id,DisplayText,PreCondition,REPLACE(REPLACE(PreCondition, CHAR(13), ''), CHAR(10), '') Fixed
+        from dbo.mytable 
+        where 
+        PreCondition LIKE '%' + CHAR(13) + '%';
+</code>
     </p>
 </section>
 
@@ -280,8 +294,7 @@ It is a SQL Server command that forces the recompilation of a stored procedure. 
     <h2>C#</h2>
     <p>
         <h4>C# 6.0 Default Implementation in Interfaces: Enhancing Flexibility and Compatibility//Handle Wrap</h4>
-       <code style="display: block;
-       white-space: pre-wrap" >
+       <code  >
         public interface IShape
         {
             double Area(); // Method signature without implementation
