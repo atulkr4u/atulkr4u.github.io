@@ -291,7 +291,7 @@ It is a SQL Server command that forces the recompilation of a stored procedure. 
 <section id="CSharp">
     <br><br><br>
 
-    <h2>C#</h2>
+    <h2>C# 6.0</h2>
     <p>
         <h4>C# 6.0 Default Implementation in Interfaces: Enhancing Flexibility and Compatibility//Handle Wrap</h4>
        <code  >
@@ -307,11 +307,52 @@ It is a SQL Server command that forces the recompilation of a stored procedure. 
         }
 
        </code>
-        
-        
-        
-        
+       <h4>Global using directives</h4>
+       <span>
+           
+           Global using directives let you specify a using directive just once and have it applied to every file that you compile.
 
+           The following examples show the breadth of the syntax:
+
+           global using System;
+           global using static System.Console;
+           global using Env = System.Environment;
+           You can put global using statements in any .cs file, including in Program.cs.
+       </span>
+       <h4>File-scoped namespaces</h4>
+       <code>
+           namespace MyNamespace;
+
+           class MyClass { ... } // Not indented
+       </code>
+        <p>
+            File-scoped namespaces enable you to declare the namespace for a whole file without nesting the remaining contents in { ... }. Only one is allowed, and it must come before any types are declared.
+
+            The new syntax is a single line:
+        </p>
+        <h4>PriorityQueue</h4>
+        <p>
+                (System.Collections.Generic) is a new collection that enables adding new items with a value and a priority. On dequeue the PriorityQueue returns the element with the lowest priority value. You can think of this new collection as similar to Queue<T>
+                    but that each enqueued element has a priority value that affects the behavior of dequeue.
+
+                    The following sample demonstrates the behavior of PriorityQueue
+        </p>
+        <code>
+                // creates a priority queue of strings with integer priorities
+                var pq = new PriorityQueue<string, int>
+                ();
+
+                // enqueue elements with associated priorities
+                pq.Enqueue("A", 3);
+                pq.Enqueue("B", 1);
+                pq.Enqueue("C", 2);
+                pq.Enqueue("D", 3);
+
+                pq.Dequeue(); // returns "B"
+                pq.Dequeue(); // returns "C"
+                pq.Dequeue(); // either "A" or "D", stability is not guaranteed.
+        </code>
+        
     </p>
 </section>
 <section id="Mongo">
