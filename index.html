@@ -372,8 +372,43 @@ It is a SQL Server command that forces the recompilation of a stored procedure. 
         }
         
     </code>
+    <h2>C# 12 .net 8</h2>
+    <h4>Collection expressions</h4>
+    <p>Collection expressions introduce a new terse syntax to create common collection values. Inlining other collections into these values is possible using a spread operator </p>
+    <code>
+        // Create an array:
+        int[] a = [1, 2, 3, 4, 5, 6, 7, 8];
 
+        // Create a list:
+        List<string> b = ["one", "two", "three"];
 
+        // Create a span
+        Span<char> c  = ['a', 'b', 'c', 'd', 'e', 'f', 'h', 'i'];
+
+        // Create a jagged 2D array:
+        int[][] twoD = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+        // Create a jagged 2D array from variables:
+        int[] row0 = [1, 2, 3];
+        int[] row1 = [4, 5, 6];
+        int[] row2 = [7, 8, 9];
+        int[][] twoDFromVariables = [row0, row1, row2];
+    </code>
+    <h4>Statement lambdas</h4>
+    <p>A statement lambda resembles an expression lambda except that its statements are enclosed in braces:</p>
+    <code>
+        Action<string> greet = name =>
+        {
+            string greeting = $"Hello {name}!";
+            Console.WriteLine(greeting);
+        };
+        greet("World");
+        // Output:
+        // Hello World!
+
+        Action line = () => Console.WriteLine();
+        
+    </code>
 
 </section>
 <section id="Mongo">
