@@ -152,7 +152,16 @@
     <!-- C# Tab -->
     <div class="tab-pane fade" id="cSharpTab">
         <h3>C# Cheat Codes</h3>
-        <p>Your C# content goes here.</p>
+        <h2></h2>
+        <span>You can create a new anonymous type with new property using existing anonymous variable</span>
+        <code>
+
+            var apple = new { Item = "apples", Price = 1.35 };
+            var onSale = apple with { Price = 0.79 };
+            Console.WriteLine(apple);
+            Console.WriteLine(onSale);
+
+        </code>
     </div>
 
     <!-- .NET Tab -->
