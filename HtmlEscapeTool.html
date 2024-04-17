@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Escape Example</title>
+</head>
+<body>
+    <textarea id="inputTextArea" rows="10" cols="50"></textarea><br>
+    <button onclick="displayOutput()">Generate Output</button><br><br>
+    <div id="outputArea"></div>
+
+    <script>
+        function displayOutput() {
+            var inputTextArea = document.getElementById("inputTextArea");
+            var outputArea = document.getElementById("outputArea");
+            var inputText = inputTextArea.value;
+            var escapedHTML = escapeHTML(inputText);
+            outputArea.innerText = escapedHTML;
+        }
+
+        function escapeHTML(html) {
+            return html.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        }
+    </script>
+</body>
+</html>
